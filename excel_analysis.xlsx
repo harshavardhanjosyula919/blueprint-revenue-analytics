@@ -1,0 +1,26 @@
+# Excel Analytics - Revenue Operations
+
+## Advanced Excel Functions Used
+
+### 1. Data Modeling (Power Pivot)
+- Created relationships between Opportunities, Accounts, and Programs tables
+- Built calculated columns for Revenue Recognition and Commission calculations
+- DAX formulas for YoY growth and QoQ comparisons
+
+### 2. Pivot Table Analysis
+**Sheet: Revenue_Pivot**
+- Rows: Region, Channel
+- Columns: Quarter
+- Values: Sum of Actual_Revenue, Count of Opportunities
+- Calculated Field: Average Deal Size = Actual_Revenue / Count
+
+**Sheet: Pipeline_Analysis**
+- Slicers: Product, Sales Stage, Marketing Program
+- Timeline: Created_Date
+- KPI Cards showing: Total Pipeline, Win Rate, Avg Sales Cycle
+
+### 3. Complex Formulas
+
+**Win Rate Calculation:**
+```excel
+=COUNTIFS(Sales_Stage,"Closed Won")/COUNTIFS(Sales_Stage,"&lt;&gt;Closed Lost")
